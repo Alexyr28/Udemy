@@ -1,0 +1,90 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li{
+    font-size: 20px;
+}
+
+/* Pseudoclase */
+ul li:first-child{
+    color: blueviolet;
+    font-weight: bold;
+}
+
+ul li:nth-child(2){
+    color: rgb(0, 255, 13);
+    font-weight: bold;
+}
+
+ul li:last-child{
+    color: brown;
+    font-weight: bold;
+}
+
+#mi_enlace{
+    font-size: 30px;
+    color: crimson;
+}
+
+/* Si no visite el link pone este color */
+#mi_enlace:link{
+    color: rgb(0, 140, 255);
+}
+
+/* Si ya se visito el sitio */
+#mi_enlace:visited{
+    color: crimson;
+}
+
+.nav_links{
+    background: red;
+}
+
+/* Evento Target */
+.nav_links:target{
+    background-color: rgb(17, 0, 255);
+}
+
+/* Raiz del documento */
+:root{
+    --blue:blue; /* Crear Variable */
+}
+
+h1{
+    color: var(--blue);
+}
+
+/* PSEUDOELEMENTOS */
+p::selection{
+    background-color: purple;
+}
+
+p::first-line{
+    background-color: brown;
+}
+
+p::first-letter{
+    background-color: coral;
+}
+
+input[type="text"]::placeholder{
+    color: red;
+}
+
+p::before{
+    content: '';
+    background-image: url(../images/menu.png);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0%;
+}
+
+p::before{
+    content: '';
+    background-image: url(../images/menu.png);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}

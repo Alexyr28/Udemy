@@ -1,0 +1,469 @@
+/* FUENTES */
+@font-face {
+    font-family: "Fuente1";
+    src: url(../css/Font/TrebuchetMS.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Fuente2";
+    src: url(../css/Font/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Fuente3";
+    src: url(../css/Font/websymbols-regular-webfont.eot);
+    src: url(../css/Font/websymbols-regular-webfont.eot?#ieflix) format('embedded-opentype'), url(../css/Font/websymbols-regular-webfont.woff) format('woff'), url(../css/Font/websymbols-regular-webfont.ttf) format('truetype'), url(../css/Font/websymbols-regular-webfont.svg?#WebSymbolsRegular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* GENERALES */
+:root{
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+    --garyish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* ESRILOS DE MANERA RESPONSIVE */
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Public Sans', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav{
+    background-color: var(--white);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_img{
+    display: block;
+}
+
+.nav_icon{
+    display: block;
+}
+
+.nav_links{
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 3em 1em;
+    box-shadow: 0 0 3px rgb(0, 0, 0, .7);
+    z-index: 1000;
+    border-radius: 6px;
+    display: grid;
+    justify-items: center;
+    gap: 2em; /* Espaciados */
+    transition: transform .3s;
+    transform: translateY(-150%);
+}
+
+.nav_links:target{
+    transform: translateY(0);
+}
+
+.nav_link{
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+.hero_main{
+    max-width: 1200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.hero_background{
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/img-hero.png);
+    background-repeat: no-repeat;
+    background-size: 100% 350px;
+    position: relative;
+}
+
+.hero_background::before{
+    content: "";
+    background-image: url(../img/vector.svg);
+    width: 100%;
+    max-width: 1000px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-size: cover; /* Tamaño de la imagen que no se estire*/
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin: 0 auto;
+}
+
+.hero_texts{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.hero_title{
+    margin-top: 1em;
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: var(--dark-blue);
+}
+
+.hero_paragraph{
+    line-height: 1.5;
+    font-weight: 300;
+    margin: 1em 0 1.5em;
+    color: var(--garyish-blue);
+}
+
+.cta{
+    display: inline-block;
+    padding: 1em 2em;
+    background-image: linear-gradient(to right, var(--dark-blue), var(--bright-cyan));
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2em;
+}
+
+.easybank{
+    background-color: var(--light-grayish-blue);
+}
+
+.easybank_container{
+    text-align: center;
+    padding: 70px 0;
+}
+
+.title{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--dark-blue);
+}
+
+.easybank_paragraph{
+    line-height: 1.5;
+    margin-top: 1em;
+    margin-bottom: 4em;
+    color: var(--garyish-blue);
+}
+
+.easybank_services{
+    display: grid;
+    gap: 3em;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.easybank_icon{
+    display: block;
+    margin: 0 auto;
+    width: max-content; /* El contenido no se va ajustar */
+}
+
+.img_icon{
+    width: 75px;
+    height: 75px;
+}
+
+.easybank_title{
+    margin: 1em 0;
+    color: var(--dark-blue);
+    font-weight: 400;
+}
+
+.easybank_copy{
+    line-height: 1.5;
+    color: var(--garyish-blue);
+}
+
+.articles{
+    background-color: var(--very-light-gray);
+}
+
+.articles_container{
+    padding: 70px 0;
+    text-align: center;
+}
+
+.articles_content{
+    margin-top: 2em;
+    display: grid;
+    gap: 2em;
+}
+
+.articles_article{
+    --img-bg: url('../img/1567497.jpg');
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 0 3px rgb(0, 0, 0, .2);
+    overflow: hidden;
+    text-align: left;
+}
+
+/* me permite seleccionar el elemento n(2) de esa clase */
+.articles_article:nth-last-of-type(1){
+    --img-bg: url('../img/aprender-fotografia_dest.jpg');
+}
+.articles_article:nth-last-of-type(2){
+    --img-bg: url('../img/R1-300x250.png');
+}
+.articles_article:nth-last-of-type(3){
+    --img-bg: url('../img/24_rest_api_tips.jpg');
+}
+
+.articles_img{
+    width: 100%;
+    height: 250px;
+    background-image: var(--img-bg);
+    background-size: cover;
+    background-position: center;
+}
+
+.articles_text{
+    padding: 1.5em 1em 2.5em;
+}
+
+.articles_author{
+    color: var(--garyish-blue);
+    font-size: .8rem;
+}
+
+.articles_title{
+    color: var(--dark-blue);
+    font-weight: 400;
+    margin: .7rem 0;
+}
+
+.articles_paragraph{
+    color: var(--garyish-blue);
+    line-height: 1.5;
+}
+
+#footer{
+    width: 100%;
+    height: 470px;
+    background-color: rgb(0, 0, 0, .091);
+    color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .wrap>div agarra la clase wrap y todos los div que pertenecen */
+#footer .wrap>div{
+    float: left;
+    width: 320px;
+    height: 370px;
+    margin: 40px;
+    text-align: center;
+    color: black;
+    font-family: 'Fuente 1';
+}
+
+#footer a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.569);
+    transition: all 300ms;
+}
+
+#footer h5{
+    display: block;
+    background: white;
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: 'Fuente2';
+    font-size: 25px;
+    line-height: 55px;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#footer ul{
+    text-align: left;
+    margin: 20px;
+    font-size: 20px;
+}
+
+#footer ul li{
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#footer ul li a{
+    display: block;
+    height: 40px;
+    transition: all 300ms;
+}
+
+#footer ul li a:hover {
+    padding-left: 40px;
+    color: black;
+    width: 100%;
+}
+
+#footer iframe{
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+#footer img{
+    margin-bottom: 15px;
+}
+
+#footer #browsers img{
+    width: 45px;
+}
+
+.cta--nav{
+    display: none;
+}
+
+@media (min-width:768px) {
+    .nav_links{
+        position: unset;
+        transform: unset;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: unset;
+        padding: 0;
+        width: max-content;
+        display: flex;
+        gap: 1em;
+        height: 100%;
+    }
+
+    .nav_link{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        text-decoration: none;
+        color: var(--garyish-blue);
+        position: relative;
+    }
+
+    .nav_link::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: var(--lime-green);
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity .3s;
+    }
+
+    .nav_link:hover::before{
+        opacity: 1;
+    }
+
+    .nav_menu{
+        display: none;
+    }
+
+    .cta--nav{
+        display: inline-block;
+    }
+
+    .hero_main{
+        width: 95%;
+        margin-left: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        height: 450px;
+        align-items: center;
+    }
+
+    .hero_background{
+        width: 50%;
+        height: 100%;
+        margin-top: 100px;
+        background-image: url(../img/img-hero.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left center;
+        border-radius: 900px;
+    }
+
+    .hero_background::before{
+        left: unset;
+        right: 0px;
+        height: 550px;
+        background-position: 50px -45px;
+    }
+
+    .hero_texts{
+        width: 40%;
+        padding-bottom: 0;
+        margin: 0 auto;
+        text-align: start;
+    }
+
+    .hero_title{
+        margin: 0;
+    }
+
+    .easybank_container{
+        text-align: start;
+    }
+
+    .easybank_paragraph{
+        width: 550px;
+    }
+
+    .easybank_services{
+        margin: 0;
+        max-width: unset;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5em;
+    }
+
+    .easybank_icon{
+        margin-left: unset;
+    }
+
+    .articles_container{
+        text-align: start;
+    }
+
+    .articles_content{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
+    }
+}

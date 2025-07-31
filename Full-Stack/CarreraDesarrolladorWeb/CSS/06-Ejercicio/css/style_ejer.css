@@ -1,0 +1,176 @@
+/* 
+1. Crear un documento con html y css
+2. Crear una estructura html que cuente con un contenedor general, cabecera, menu, seccion de contenido principal, barra lateral, elementos dentro del contenedor principal y footer
+3. Todo el contenido debe estar dentro del contenedor general y su ancho debera ser de 1200px y estar centrado
+4. Header debe ocupar el 100% del ancho y tener un texto grande centrado
+5. Menu debe tener los elementos uno al lado del otro
+6. El contenido principal debe tener un ancho de 70%
+7. El contenido dentro del contenedor principal deve ser una cuadricula con 4 lineas de 2 cajas
+8. La barra lateral debe tener un ancho de 30%
+9. El footer debe tener un ancho de 100% del div que lo contiene y estar debajo del otro */
+
+@font-face{
+    font-family: Gangsta;
+    src: url('../font/Manufacturing_Consent/ManufacturingConsent-Regular.ttf');
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#general{
+    width: 1200px;
+    margin: 0px auto;
+    margin-top: 20px;
+    border: 1px solid #2ddc27;
+}
+
+#cabecera{
+    width: 100%;
+    height: 100px;
+    background: rgb(0, 89, 255);
+    text-align: center;
+    line-height: 100px;
+}
+
+#menu{
+    background: #eeeeee;
+}
+
+#menu ul li{
+    /* display: inline-block; EN UNA SOLA LINEA */
+    /* FLOTANDO */
+    display: block; /* Comportamiento de caja */
+    float: left;
+    border-right: 1px solid black;
+}
+
+#menu ul li a{
+    display: block;
+    padding: 15px;
+    color: rgb(47, 39, 208);
+}
+
+/* PSEUDOCLASE */
+#menu ul li a:hover{
+    background: #0d0dd2;
+    color: white;
+    cursor: pointer;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+#contenido{
+    width: 69%;
+    float: left;
+}
+
+#lateral{
+    float: left;
+    width: 30%;
+    border: 1px solid #2736dc;
+    min-height: 500px;
+    max-height: 650px;
+    text-align: center;
+    overflow: hidden;
+    /* overflow: visible; */
+    overflow: scroll;
+    overflow-y: scroll;
+    text-align: justify;
+    text-indent: 30px; /* sangria */
+    word-spacing: 10px; /* Por letra */
+    letter-spacing: 10px; /* Por palabra */
+    text-transform: uppercase;
+    text-decoration: line-through;
+    text-decoration: underline;
+}
+
+#contenido h1{
+    text-align: center;
+    font-family: Gangsta;
+    font-size: 40px;
+    border-bottom: 1px solid gray;
+    padding: 15px;
+    color: #0d0dd2;
+    /* SOMBREADO
+    text-shadow: (ValorNeg = Iz ValorPos = Dr)(ValorNeg = Arriba ValorPos = Abajo)(Difuminado) color; */
+    text-shadow: 1px 5px 2px gray;
+}
+
+#contenido .caja{
+    width: 40%;
+    height: 200px;
+    background-color: aqua;
+    border: 1px solid #2d27dc;
+    color: black;
+    float: left;
+    margin: 20px;
+    text-align: center;
+    line-height: 200px;
+    color: gray;
+    text-transform: uppercase;    
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 50px;
+    /* Esquinas diferentes Tamaños */
+    border-radius: 10px 50px 20px 30px;
+    border-radius: 999px;
+}
+
+.sombra-interior{
+    box-shadow: 5px 5px 10px rgb(67, 130, 130) inset !important;
+}
+
+#pie{
+    text-align: center;
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    background-color: #eeeeee;
+    color: gray;
+    border-top: 1px solid #8291b7;
+}
+
+.libre{
+    /* Posición static
+    Posición relative top, left, right y bottom
+    Posición absolute Elimina la posición original */
+
+    /* position: static; */
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}
+
+.libre1{
+    z-index: 1;
+
+}
+.libre2{
+    background-color: green;
+    top: 280px;
+    z-index: 2;
+}
+
+.fija{
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    border: 1px solid black;
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}

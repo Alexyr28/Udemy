@@ -1,0 +1,108 @@
+.container{
+    /* Con opacidad */
+    color: rgba(98, 127, 163, 0.5);
+
+    /* FORMATO HSL */
+    color: hsl(120, 25%, 55%);
+    color: hsla(120, 30%, 70%, 0.7);
+
+    /* FORMATO HWB */
+    color: hwb(232 5% 70%);
+    color: hwb(232 5% 70% / 0.075);
+
+    /* FONT-WEIGHT */
+    color: rgb(0, 238, 255);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+
+    text-align: center;
+}
+
+/* FILTROS PERMITEN APLICAR EFECTOS VISULAES */
+.container{
+    background-color: #4caf4f;
+    background-color: rgb(179, 80, 176);
+
+    /* Borroso */
+    filter: blur(5px);
+
+    /* Brillo */
+    filter: brightness(200%);
+
+    /* Contraste */
+    filter: contrast(200%);
+
+    /* Escala de grises */
+    filter: grayscale(50%);
+
+    /* Matriz de colores del circulo cromatico de colores*/
+    filter: hue-rotate(90deg);
+    filter: hue-rotate(-90deg);
+
+    /* Invertir los colores */
+    filter: invert(100%);
+
+    /* Opacidad */
+    filter: opacity(50%);
+
+    /* Saturacion */
+    filter: saturate(200%);
+
+    /* Para fotos antiguas */
+    filter: sepia(100%);
+
+    /* Sombreado 
+    Para el eje X, el eje Y, alejamiento de sombreado y el color
+    */
+    filter: drop-shadow(5px 5px 2px black);
+
+    /* Se puede combinar varios filtros */
+    filter: blur(3px) brightness(120%) contrast(90%) hue-rotate(45deg);
+
+    /* --------------------------------------------------------------------- */
+}
+/* HERENCIA */
+.padre{
+    font-size: 2em;
+}
+
+.selected{
+    font-size: 2em;
+}
+
+.container{
+    /* UNIDADES DE MEDIDA */
+    font-size: 1em;
+    margin: 1em 2em;
+}
+
+/* TOMA VALOR DEL HTML  */
+.padre{
+    font-size: 2em;
+}
+
+.selected{
+    font-size: 2em;
+}
+
+.container{
+    /* UNIDADES DE MEDIDA */
+    font-size: 1rem;
+    margin: 1em 2em;
+}
+
+img{
+    width: 50%;
+    height: 50%;
+}
+
+/* Tamaño ancho de la ventana */
+h1{
+    font-size: 5VW;
+}
+/* Tamaño ancho y alto de la ventana */
+.mi-div{
+    width: 50vw;
+    height: 75vh;
+    background-color: aqua;
+}

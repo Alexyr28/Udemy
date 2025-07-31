@@ -1,0 +1,112 @@
+/* --------SELECTORES-------- */
+/* --------Selector Universal-------- */
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* --------Selector de Etiqueta-------- */
+h1{
+    background: red;
+    color: white;
+    padding: 10px;
+}
+
+a{
+    font-size: 18px;
+    color: green;
+    text-decoration: none;
+}
+
+footer a{
+    color: red;
+}
+
+/* --------Selectores por id-------- */
+#descripcion, #titulo{
+    border: 5px solid black;
+    padding: 15px;
+}
+
+#titulo{
+    background: blue;
+    border: 2px dashed white;
+}
+
+/* --------Selectores por clase-------- */
+.parrafo2{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.parrafo1, .parrafo3{
+    background-color: green; /* Cambia el color de fondo */
+    color: white;
+    padding: 10px;
+}
+
+.parrafo3{
+    background-color: orange;
+    color: black;
+}
+
+/* --------Selectores por Atributo-------- */
+#user form{
+    border: 5px solid blue;
+    margin-top: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+#user form *{
+    display: block;
+}
+
+/* --------Con ^ le digo los que al principio tienen www-------- */
+a[href^="www"]{
+    color: yellow;
+}
+
+/* --------Con $ le digo los que al final tienen com-------- */
+a[href$="com"]{
+    color: royalblue;
+}
+
+/* --------Con * le digo los que al final tienen com-------- */
+a[href*="alex"]{
+    color: purple;
+}
+
+input[type="text"]{
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 300px;
+}
+
+input[type="submit"]{
+    background: green;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+/* -------- Selector Hijo -------- */
+#menu>li>a{
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+/* -------- Prioridad -------- */
+#saludo h1{
+    background: blueviolet; /* <--- Este Prioriza el id */
+}
+
+h1{
+    background: rosybrown; /* <--- Este No se ejecuta */
+}
+
+h1{
+    background: red !important; /* <--- Sobre todo lo prioriza */
+}

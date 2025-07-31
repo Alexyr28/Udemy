@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="GET"> <!--Form etiqueta del formulario que recibe atributos-->
+        <label for="nom">Ingese su nombre</label>
+        <br>
+        <input type="text" value="Nombre">
+        <input type="text" name="Nombre" id="nom" placeholder="Escribe tu nombre" maxlength="8" minlength="1" size="20">
+        <br><br>
+        <label>Password</label>
+        <br>
+        <input type="password" name="password">
+        <br><br>
+        <label>Email</label>
+        <br>
+        <input type="email" name="email">
+        <br><br>
+        <label>Edad</label>
+        <br>
+        <input type="number" min="1" max="40" name="edad">
+        <br><br><br>
+        <input type="checkbox" name="sexo" value="Masculino">Masculino
+        <input type="checkbox" name="sexo" value="Femenino">Femenino
+        <br><br>
+        <input type="radio" name="Sexo">Hombre
+        <input type="radio" name="Sexo">Mujer
+        <br><br>
+        <input type="button" value="Enviar">
+        <br><br>
+        <input type="submit" value="Enviar-Datos">
+        <br><br>
+        <select name="Pais" id=""> <!--Menú Desplegable-->
+            <option value="Colombia">Colombia</option>
+            <option value="México">México</option>
+        </select>
+        <br><br>
+        <input type="color" name="color">
+        <input type="range" name="rango">
+    </form>
+</body>
+</html>

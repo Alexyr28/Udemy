@@ -1,0 +1,138 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#boton{
+    display: block;
+    width: 200px;
+    padding: 15px;
+    border: 1px solid rebeccapurple;
+    background-color: aliceblue;
+    margin: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rebeccapurple;
+    /* TRANSITION */
+    transition: 15s;
+    transition: background-color, width, color, 5s;
+}
+
+#boton:hover{
+    background-color: steelblue;
+    width: 400px;
+    color: chartreuse;
+}
+
+#caja{
+    background-color: tomato;
+    width: 200px;
+    height: 200px;
+    clip-path: circle(50% at center);
+    clip-path: circle(50% at top left);
+    margin: 20px;
+    transition-property: clip-path;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    transition-delay: 1s;
+}
+
+.container:hover #caja{
+    clip-path: circle(150% at top left);
+}
+
+
+/* ANIMACIONES */
+#caja2{
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+    background-color: lightgreen;
+    color: white;
+    border: 5px solid black;
+    font-size: 20px;
+    text-align: center;
+    line-height: 250PX;
+
+    animation-name: desplazamiento;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* MANERA CORTA */
+@keyframes desplazamiento{
+    from{
+        margin-left: 0px;
+    }
+    to{
+        margin-left: 1250px;
+    }
+}
+
+/* MANERA COMPLETA */
+@keyframes desplazamiento{
+    0%{
+        margin-left: 0px;
+    }
+    50%{
+        margin-left: 1250px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+
+@keyframes desplazamiento{
+    0%{
+        margin-left: 0px;
+        /* deg son grados */
+        transform: rotate(0deg);
+    }
+    50%{
+        margin-left: 1250px;
+        transform: rotate(370deg);
+    }
+    100%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes desplazamiento{
+    0%{
+        margin-left: 0px;
+        transform: rotate(0deg);        
+    }
+    50%{
+        margin-left: 1250px;
+        transform: rotate(370deg);
+        border-radius: 999px;
+    }
+    100%{
+        margin-left: 0px;
+        transform: rotate(0deg); 
+    }
+}
+
+@keyframes desplazamiento{
+    0%{
+        margin-left: 0px;
+        transform: rotate(0deg);        
+    }
+    50%{
+        margin-left: 1250px;
+        transform: rotate(370deg);
+        border-radius: 999px;
+    }
+    75%{
+        background-color: rebeccapurple;
+    }
+    77%{
+        border: 10px dashed blue;
+    }
+    100%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+}

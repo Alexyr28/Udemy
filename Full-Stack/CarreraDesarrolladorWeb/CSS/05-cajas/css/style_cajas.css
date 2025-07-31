@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    /* para separar de los bordes de todo el body */
+    padding: 40px;
+}
+
+#cajas{
+    /* Ancho maximo de pantalla */
+    max-width: 1035px;
+    /* Borde tamaño tipo y color */
+    border: 1px solid black;
+}
+
+.caja{
+    /* Se compaorta como una caja */
+    display: block;
+    /* Anchura */
+    width: 250px;
+    /* Altura */
+    height: 250px;
+    background-color: lightblue;
+    border: 10px solid black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    padding: 20px;
+    padding-bottom: 34px;
+    /* Flotar las cajas con float que se debe aplicar cuando el display es en las cajas se moveran a la ziquierda */
+    float: left;
+    /* Flotar las cajas con float que se debe aplicar cuando el display es en las cajas se moveran a la ziquierda */
+    /* float: right; */
+    /* Flotar las cajas con float que se debe aplicar cuando el display es en las cajas se moveran a la ziquierda */
+    /* float: none; */
+}
+
+@font-face{
+    font-family: Gangsta;
+    src: url(../font/Manufacturing_Consent/ManufacturingConsent-Regular.ttf);
+}
+
+.caja p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    font-family: Gangsta;
+    /* Texto en el medio */
+    line-height: 250px;
+
+}
+
+.clearfix{
+    float: none;
+    /* Limpia los flotantes */
+    clear: both;
+}
