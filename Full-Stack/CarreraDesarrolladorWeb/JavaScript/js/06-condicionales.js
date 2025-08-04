@@ -3,7 +3,7 @@
 //CONDICIONAL IF
 var edad = 19;
 var nombre = "Juan";
-var año = 2023;
+var año = 1999;
 
 // NO. 1
 if (edad == 11)
@@ -36,3 +36,22 @@ if(edad>=18 && edad <=54){
 }
 
 // NO. 4
+if(año == 1981 || año >= 1981){
+    console.log("Generación Milenial");    
+}else{
+    console.log("No Generación Milenial");    
+}
+
+//NO. 5 MEJOR PRACTICA
+if(año == 1981 || (año >=1981 && año <= 1993)){
+    console.log("Generación Milenial");
+}else{
+    console.log("No Generación Milenial");
+}
+
+//NO. 6
+if(año == 1994 || año >= 1994 && año <= 2000){
+    console.log("Generación Z");
+}else{
+    console.log("No Generación Z");
+}
