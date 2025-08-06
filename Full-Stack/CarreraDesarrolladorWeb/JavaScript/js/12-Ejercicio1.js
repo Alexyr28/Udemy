@@ -31,4 +31,10 @@ while(bandera2){
 }
 
 //Validación
-
+if(numero1 > numero2){
+    alert("El primer número " + numero1 + " es mayor");
+}else if(numero2 > numero1){
+    alert("El segundo número" + numero2 + " es mayor");
+}else{
+    alert("Los números son iguales");
+}
