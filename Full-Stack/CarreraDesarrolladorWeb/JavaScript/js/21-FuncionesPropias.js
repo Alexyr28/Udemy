@@ -53,3 +53,38 @@ busqueda = texto.substr(9, 6);
 console.log(busqueda);
 
 //CHARAT MUESTRA LA LETRA EN EL NUMERO QUE LE INDICO
+busqueda = texto.charAt(10);
+console.log(busqueda);
+
+//STARTSWITH DEVUELVE UN TRUE PERO ES PARA BUSCAR SOLO LA PRIMERA PALABRA DEL TEXTO
+busqueda = texto.startsWith("Texto");
+console.log(busqueda);
+
+//ENDSWITH
+busqueda = texto.endsWith("JavaScript");
+console.log(busqueda);
+
+//INCLUDES DEVUELVE TRUE SI ENCUENTRA LA PALABRA
+busqueda = texto.includes("otras");
+console.log(busqueda);
+
+//REPLACE remplaza la palabra
+busqueda = texto.replace("JavaScript", "Angular");
+console.log(busqueda);
+
+//SLICE DEVUELVE A PARTIR DEL CARACTER 14
+busqueda = texto.slice(14);
+console.log(busqueda);
+
+busqueda = texto.slice(14, 22);
+console.log(busqueda);
+
+//SPLIT CONVIERTE EL TEXTO EN UN ARRAY
+busqueda = texto.split();
+console.log(busqueda);
+//PARA QUE CADA CARACTER SE CONVIERTA EN EN UN ELEMENTO DE LA LISTA
+busqueda = texto.split("");
+console.log(busqueda);
+//PARA QUE CADA LETRA SE CONVIERTA EN UN ELEMENTO DE LA LISTA
+busqueda = texto.split(" ");
+console.log(busqueda);
