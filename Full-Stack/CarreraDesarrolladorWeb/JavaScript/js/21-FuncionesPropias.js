@@ -4,7 +4,7 @@
 
 var numero = 25;
 var texto = "Texto en JavaScript entre otras cosas JavaScript";
-var texto2 = " EN EL CURSO";
+var texto2 = "   EN EL CURSO    ";
 
 var dato = numero.toString();
 console.log(typeof dato);
@@ -88,3 +88,12 @@ console.log(busqueda);
 //PARA QUE CADA LETRA SE CONVIERTA EN UN ELEMENTO DE LA LISTA
 busqueda = texto.split(" ");
 console.log(busqueda);
+
+//TRIM QUITA LOS ESPACIOS SOBRANTES POR DELANTE Y POR DETRÁS
+busqueda = texto2.trim();
+console.log(busqueda);
+
+busqueda = texto.trim().split(" ");
+console.log(busqueda);
+
+
