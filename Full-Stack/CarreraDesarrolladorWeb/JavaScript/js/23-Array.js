@@ -53,3 +53,14 @@ console.log(mujeres);
 console.log(mujeres[0][2]);
 console.log(mujeres[1][6]);
 
+var elm = "";
+while(elm != "terminar"){
+    elm = prompt("Introduce Nombre de Mujer");
+    if(elm != "terminar"){
+        damas.push(elm);
+    }else{
+        break;
+    }
+}
+
+console.log(damas);
