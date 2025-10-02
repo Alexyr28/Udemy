@@ -64,3 +64,60 @@ while(elm != "terminar"){
 }
 
 console.log(damas);
+
+//Eliminar un elemento en concreto-
+var indice = damas.indexOf("angela");
+if(indice > -1){
+    damas.splice(indice, 1); //splice(posicion,cuantos)
+}
+
+console.log(damas);
+
+//JOIN CONVIERTE EN UN STRING SEPARADO POR COMAS
+var damas_string = damas.join(", ");
+console.log(damas_string);
+
+//SPLIT CONVIERTE STRING EN ARRAY
+var cadena = "texto, texto1, texto2, texto3, texto4";
+var cadena_array = cadena.split(", ");
+console.log(cadena_array);
+
+//ORDENAR ALAFABETICAMENTE
+console.log(damas.sort());
+
+//REVEERSE EL ARRAY
+console.log(damas.reverse());
+
+//------------OTRA FORMA DE RECORRER UN ARRAY--------------
+// FOR IN LANZA EL INDICE
+document.writeln("<ul>");
+for(let damax in damas){
+    document.writeln("<li>" + damas[damax] + "</li>")
+}
+document.writeln("</ul>");
+
+//FOR OF LANZA EL ELEMENTO
+document.writeln("<ul>");
+for(let damax1 of damas){
+    document.writeln("<li>"+ damax1 + "</li>")
+}
+document.writeln("</ul>");
+
+//BUSCAR ELEMENTO EN EL ARRAY
+var busqueda = damas.find(function(dama){
+    return dama == "belen";
+})
+
+console.log(busqueda);
+
+var busqueda2 = damas.find(dama => dama == "belen");
+console.log(busqueda2);
+
+var busqueda2 = damas.findIndex(dama => dama == "belen");
+console.log(busqueda2);
+
+//SOME UNA FORMA BUSCAR Y COMPARAR CON UN ARRAY
+var precios = [10, 20, 30, 40, 50];
+var busqueda3 = precios.some(precio => precio > 30);
+console.log(busqueda3);
+
