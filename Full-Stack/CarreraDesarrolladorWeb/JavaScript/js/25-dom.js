@@ -48,7 +48,38 @@ console.log(contenido);
 var contenido = todoslosdiv[2]
 contenido.innerHTML = "Hola soy Alexyr"
 
+//CREAR ELEMENTOS, ETIQUETAS Y ATRIBUTOS
 
+var seccion = document.querySelector("#miseccion");
+var h1 = document.getElementById("mih1");
 
+//CREAR createdElement
+var hr = document.createElement("hr");
 
+//AÑADIR CON append AL DOM
+seccion.append("Agregando elemento");
+seccion.append(hr);
+//AÑADIR ELEMENTO ANTES
+seccion.prepend("Agregando elemento antes");
 
+var p = document.createElement("p");
+//AÑADIR ELEMENTO ANTES DE UN ELEMENTO ESPECIFICADO
+p.append("Agregando elemento antes del elemento especificado");
+seccion.insertBefore(p,h1);
+
+//ELEJIR EL ID
+
+var seccion = document.querySelector("#miseccion");
+var h1 = document.getElementById("mih1");
+var hr = document.createElement("hr");
+
+for(let valor in todoslosdiv){
+    if(typeof todoslosdiv[valor].textContent == 'string'){
+        var parrafo = document.createElement("p");
+        var texto = document.createTextNode(todoslosdiv[valor].textContent);
+        //AGREGAR TEXTO AL PARRAFO
+        parrafo.append(texto);
+        seccion.append(parrafo);
+    }
+}
+seccion.append(hr);
