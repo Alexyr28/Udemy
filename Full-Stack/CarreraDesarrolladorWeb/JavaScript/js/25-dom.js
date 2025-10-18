@@ -83,3 +83,30 @@ for(let valor in todoslosdiv){
     }
 }
 seccion.append(hr);
+
+//CONSEGUIR ELEMENTOS POR SU CLASE SE USA getElementByClassName es recomendable para agarrar por si hay mas de una clase igual
+var divrojos = document.getElementsByClassName("rojo");
+var divamarillos = document.getElementsByClassName("amarillo");
+console.log(divrojos);
+console.log(divamarillos);
+
+divrojos[0].style.background='red';
+divamarillos[0].style.background="yellow";
+
+for(var index in divrojos){
+    if(divrojos[index].className=="rojo"){
+        divrojos[index].style.background="blue";    
+    }
+}
+
+var elems_varios = document.querySelectorAll("h1, #mih1, .amarillo, h3");
+console.log(elems_varios);
+
+var seccion = document.querySelector("#miseccion");
+
+elems_varios.forEach((Element) => {
+    var parrafo = document.createElement("p");
+    var texto = document.createTextNode(Element.innerHTML);
+    parrafo.append(texto);
+    seccion.append(parrafo);
+})
