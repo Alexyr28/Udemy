@@ -1,0 +1,11 @@
+La diferencia entre la programación orientada a objetos y la programación estructurada es que la programación orientada a objetos se centra en los objetos, mientras que la programación estructurada se centra en las funciones.
+
+Estructurada: Es un estilo de programación que se centra en las funciones y los datos.
+
+Orientada a objetos: Es un estilo de programación que se centra en los objetos y clases para modelar problemas reales y solucionarlos.
+
+TypeScript: Es un lenguaje de programación que se centra en los objetos y clases para modelar problemas reales y solucionarlos.
+
+Node.js: Es un entorno de ejecución que permite ejecutar JavaScript en el servidor.
+
+TypeScript: Para no tener que compilar el código TypeScript a JavaScript, se puede usar el compilador de TypeScript se utilizar el comando tsc -w *.ts pero se necesita la consola Cygwin.
